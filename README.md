@@ -1,6 +1,7 @@
 Need to create two .txt files in the same dir as the script for this to work.
 
 x-plex_token.txt
+
 plex_version.txt
 
 
