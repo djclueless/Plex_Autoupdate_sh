@@ -32,6 +32,7 @@ url=$(echo $response | jq -r '.computer.FreeBSD.releases[0].url')
 checksum=$(echo $response | jq -r '.computer.FreeBSD.releases[0].checksum')
 version=$(echo $response | jq -r '.computer.FreeBSD.version')
 
+echo "Current Version: $plex_version"
 echo "API Link: $download_url"
 echo "Lastest Version: $version"
 echo "Latest URL: $url"
@@ -58,7 +59,7 @@ dl_version=${version%-FreeBSD-amd64.tar.bz2}
 
 echo "Download Version = $dl_version"
 
-if [ $version == $dl_version ]; then
+if [ $plex_version == $dl_version ]; then
   echo "Already at the latest version."
   exit 1
 fi
