@@ -37,8 +37,6 @@ echo "Lastest Version: $version"
 echo "Latest URL: $url"
 echo " Latest Checksum: $checksum"
 
-echo "$version" > "$plex_version_file"
-
 if [ -z "$url" ]; then
   echo "Error: Please provide the URL of the Plex update file."
   exit 1
@@ -99,3 +97,5 @@ rm "/tmp/$filename"
 service plexmediaserver_plexpass start
 
 ps aux
+
+echo "$version" > "$plex_version_file"
