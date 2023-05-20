@@ -13,4 +13,4 @@ sh plex_auto_update.sh
 
 Crontab to run everyday at 4am
 
-0 4 * * * cd /plex_autoupdate && /bin/sh ./full_auto.sh
+0 4 * * * cd /plex_autoupdate && /bin/sh ./plex_auto_update.sh
