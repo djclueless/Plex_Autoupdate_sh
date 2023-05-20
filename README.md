@@ -10,3 +10,6 @@ plex_version.txt
 For plexpass you need to paste your plex token in the x-plex-token.txt file. To locate this token google "x-plex token". The plex_version file auto populates to keep track of current version that is installed.
 
 sh plex_auto_update.sh
+
+Crontab to run everyday at 4am
+0 4 * * * cd /plex_autoupdate && /bin/sh ./full_auto.sh
